@@ -36,6 +36,7 @@ RUN apt-get update && apt-get install -y software-properties-common && \
     megatools mediainfo && \
     # clean up the container "layer", after we are done
     rm -rf /var/lib/apt/lists /var/cache/apt/archives
+RUN apt-get install psutil
 
 RUN wget https://johnvansickle.com/ffmpeg/builds/ffmpeg-git-amd64-static.tar.xz && \
     tar xvf ffmpeg*.xz && \
