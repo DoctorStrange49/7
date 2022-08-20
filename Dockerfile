@@ -67,11 +67,8 @@ RUN aria2c https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip && 
 RUN gem install rmega
 
 #Youtube View
-RUN git clone https://github.com/MShawon/YouTube-Viewer.git --depth 10 \
-    cd YouTube-Viewer \
-    python3 -m pip install --upgrade pip wheel \
-    pip3 install "setuptools<59" \
-    pip3 install -r requirements.txt
+RUN git clone https://github.com/MShawon/YouTube-Viewer.git --depth 10 
+
 # Copies config(if it exists)
 COPY . .
 
