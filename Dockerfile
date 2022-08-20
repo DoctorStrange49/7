@@ -13,7 +13,7 @@ RUN sh -c 'echo "deb https://mkvtoolnix.download/debian/ buster main" >> /etc/ap
     sh -c 'echo deb http://deb.debian.org/debian buster main contrib non-free | tee -a /etc/apt/sources.list' && apt update && apt install -y mkvtoolnix
 # Chrome Browser
 RUN wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-
+RUN apt-get install -y ./google-chrome-stable_current_amd64.deb
 # install required packages
 RUN apt-get update && apt-get install -y software-properties-common && \
     rm -rf /var/lib/apt/lists/* && \
